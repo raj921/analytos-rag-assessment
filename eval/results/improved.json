@@ -1,0 +1,395 @@
+{
+  "metrics": {
+    "cases": 14,
+    "retrieval_hit_rate": 1.0,
+    "refusal_accuracy": 1.0,
+    "access_leaks": 0,
+    "keyword_coverage": 1.0,
+    "avg_latency_ms": 2972,
+    "p95_latency_ms": 4542,
+    "total_tokens": 20575
+  },
+  "cases": [
+    {
+      "answer": "An itemized receipt is required for any single expense of $25 or more. Credit card statements alone are not sufficient. For meals, the receipt must show the itemized order, business purpose, and attendee names. [ExpensePolicy.pdf]",
+      "sources": [
+        "ExpensePolicy.pdf"
+      ],
+      "query": "When do I need original receipts for expense claims?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.25
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.033
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 781,
+        "completion_tokens": 88
+      },
+      "_latency_ms": 2616
+    },
+    {
+      "answer": "Employees get up to 5 paid days for the death of an immediate family member and up to 2 paid days for an extended family member. [LeavePolicy.pdf]",
+      "sources": [
+        "LeavePolicy.pdf"
+      ],
+      "query": "How many days of bereavement leave do employees get?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 2.999
+        },
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 2.934
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1004,
+        "completion_tokens": 38
+      },
+      "_latency_ms": 2028
+    },
+    {
+      "answer": "macOS 13 (Ventura) or later is supported. [VPNGuide.pdf]",
+      "sources": [
+        "VPNGuide.pdf"
+      ],
+      "query": "What are the VPN device requirements for macOS?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "VPNGuide.pdf",
+          "score": 2.594
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 561,
+        "completion_tokens": 22
+      },
+      "_latency_ms": 2066
+    },
+    {
+      "answer": "The minimum password length is **12 characters**. [PasswordPolicy.docx]",
+      "sources": [
+        "PasswordPolicy.docx"
+      ],
+      "query": "What is the minimum password length?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.949
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.012
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 878,
+        "completion_tokens": 20
+      },
+      "_latency_ms": 2472
+    },
+    {
+      "answer": "The policies do not define a monetary \u201cairline ticket limit.\u201d They define allowable airfare by flight duration and traveler level; upgrades beyond the permitted class are non-reimbursable [TravelPolicy.docx] [ExpensePolicy.pdf].\n\nFor travel expenses with explicit pre-approval requirements:\n\n- **Hotel bookings above the city-tier nightly cap** require **Director-or-above pre-approval** [TravelPolicy.docx].\n- **Rental cars** require **Director approval** [TravelPolicy.docx].\n- For other expenses, the dollar-based approval thresholds are defined in the **Expense Policy approval matrix**: up to $500\u2014Direct Manager; $500\u2013$2,500\u2014Department Director; $2,500\u2013$10,000\u2014Department VP; above $10,000\u2014VP plus Finance Business Partner [ExpensePolicy.pdf].",
+      "sources": [
+        "TravelPolicy.docx",
+        "ExpensePolicy.pdf"
+      ],
+      "query": "Which expenses above the airline ticket limit require pre-approval, and where is that approval limit defined?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.624
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.484
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 2.564
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 2.39
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1635,
+        "completion_tokens": 364
+      },
+      "_latency_ms": 4517
+    },
+    {
+      "answer": "Key differences between 2026 and 2025 OrbitSuite pricing:\n\n- **Subscription prices increased:** Starter rose from **$29 to $32/seat/month**, Professional from **$59 to $65**, and Enterprise from **$99 to $109**\u2014approximately an 8\u201310% increase. [Pricing2025.pdf] [Pricing2026.pdf]\n- **New tier introduced:** **Enterprise Plus** is available at **$145/seat/month**, with a 100-seat minimum, 1-hour SLA, multi-region deployment, and a dedicated CSM plus TAM. [Pricing2026.pdf]\n- **Professional API capacity increased:** From **50,000 to 100,000 calls/month**. [Pricing2025.pdf] [Pricing2026.pdf]\n- **Enterprise features expanded:** Audit logs and data residency controls are now included with **Enterprise**, rather than being limited to Enterprise Plus. [Pricing2026.pdf]\n- **Add-on prices increased:** Advanced Analytics rose from **$12 to $14**, Premium Integrations from **$8 to $9**, and an additional sandbox from **$250 to $275/month**. [Pricing2025.pdf] [Pricing2026.pdf]\n- **Onboarding eligibility and price changed:** The package increased from **starting at $4,000 to $4,500** and is available for **Enterprise and above**; in 2025 it was Enterprise-only. [Pricing2025.pdf] [Pricing2026.pdf]\n- **Enterprise Plus billing restriction:** Monthly billing remains available for other tiers, but Enterprise Plus requires **annual prepaid billing**. [Pricing2026.pdf]\n- **Existing 2025 customers are protected:** Customers on active 2025 contracts retain their contracted rate until their current renewal date. [Pricing2026.pdf]",
+      "sources": [
+        "Pricing2025.pdf",
+        "Pricing2026.pdf"
+      ],
+      "query": "How does the 2026 pricing differ from 2025?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.69
+        },
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.536
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.517
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.261
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.203
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2293,
+        "completion_tokens": 414
+      },
+      "_latency_ms": 4542
+    },
+    {
+      "answer": "The Enterprise plan costs **$109 per seat per month**. [Pricing2026.pdf]",
+      "sources": [
+        "Pricing2026.pdf"
+      ],
+      "query": "What is the enterprise plan price per seat per month?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.736
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.405
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.29
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1456,
+        "completion_tokens": 23
+      },
+      "_latency_ms": 1984
+    },
+    {
+      "answer": "The 2025 Enterprise plan price was **$99 per seat per month**, with a **25-seat minimum**. [Pricing2025.pdf]",
+      "sources": [
+        "Pricing2025.pdf"
+      ],
+      "query": "What was the enterprise plan price in 2025?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.506
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.337
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.336
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1283,
+        "completion_tokens": 34
+      },
+      "_latency_ms": 2365
+    },
+    {
+      "answer": "I don't have enough information in the knowledge base to answer that.",
+      "sources": [],
+      "query": "What is the company's current stock price?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.498
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.501
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.377
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.373
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1667,
+        "completion_tokens": 17
+      },
+      "_latency_ms": 2359
+    },
+    {
+      "answer": "I don't have enough information in the knowledge base to answer that.",
+      "sources": [],
+      "query": "What is the WiFi password for the coffee shop next to the office?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.275
+        },
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.259
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.115
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.099
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.027
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1887,
+        "completion_tokens": 17
+      },
+      "_latency_ms": 2066
+    },
+    {
+      "answer": "Which limit do you mean: an expense category limit, the vendor agreement\u2019s liability cap, or the insurance coverage limit?",
+      "sources": [],
+      "query": "What is the limit?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.275
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 2.09
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 962,
+        "completion_tokens": 72
+      },
+      "_latency_ms": 2599
+    },
+    {
+      "answer": "Standard plans have a 12-month contract term with auto-renewal and can be cancelled with 30 days\u2019 written notice before renewal [Pricing2026.pdf].",
+      "sources": [
+        "Pricing2026.pdf"
+      ],
+      "query": "Standard plan cancellation policy",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.94
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 1.537
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 1.516
+        },
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 1.51
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1731,
+        "completion_tokens": 79
+      },
+      "_latency_ms": 3764
+    },
+    {
+      "answer": "Yes. Exceptions include:\n\n- Expenses under $25 do not require an itemized receipt [ExpensePolicy.pdf].\n- For travel meals and incidentals, you may choose the standard per-diem rate instead of actual-cost reimbursement; per diem and actual-cost reimbursement cannot be mixed on the same trip [TravelPolicy.docx].\n\nFor actual-cost travel expenses of $25 or more, itemized receipts are required [TravelPolicy.docx].",
+      "sources": [
+        "ExpensePolicy.pdf",
+        "TravelPolicy.docx"
+      ],
+      "query": "Exceptions to the requirement for an itemized original receipt for expenses of $25 or more",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.614
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.164
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 2.296
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1209,
+        "completion_tokens": 233
+      },
+      "_latency_ms": 5515
+    },
+    {
+      "answer": "I don't have enough information in the knowledge base to answer that.",
+      "sources": [],
+      "query": "What is the enterprise plan price per seat?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "Benefits.pdf",
+          "score": 1.701
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.661
+        },
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 1.037
+        },
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 0.961
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1763,
+        "completion_tokens": 44
+      },
+      "_latency_ms": 2720
+    }
+  ]
+}

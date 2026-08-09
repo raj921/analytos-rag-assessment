@@ -1,0 +1,495 @@
+{
+  "metrics": {
+    "cases": 14,
+    "retrieval_hit_rate": 0.9,
+    "refusal_accuracy": 0.929,
+    "access_leaks": 2,
+    "keyword_coverage": 1.0,
+    "avg_latency_ms": 3386,
+    "p95_latency_ms": 6545,
+    "total_tokens": 31434
+  },
+  "cases": [
+    {
+      "answer": "An itemized receipt is required for any single expense of $25 or more. Credit card statements alone are not sufficient. For meals, the receipt must show the itemized order, business purpose, and names of attendees. [ExpensePolicy.pdf]",
+      "sources": [
+        "ExpensePolicy.pdf"
+      ],
+      "query": "When do I need original receipts for expense claims?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.25
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.033
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 1.942
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 1.731
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 1.666
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2038,
+        "completion_tokens": 53
+      },
+      "_latency_ms": 8327
+    },
+    {
+      "answer": "Employees receive up to 5 paid days for the death of an immediate family member and up to 2 paid days for an extended family member. [Leave & Time Off Policy]",
+      "sources": [],
+      "query": "How many days of bereavement leave do employees get?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 2.999
+        },
+        {
+          "title": "LeavePolicy.pdf",
+          "score": 2.934
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.734
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.608
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 1.577
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2169,
+        "completion_tokens": 40
+      },
+      "_latency_ms": 1858
+    },
+    {
+      "answer": "macOS 13 (Ventura) or later is required for NorthLink VPN. [VPNGuide.pdf]",
+      "sources": [
+        "VPNGuide.pdf"
+      ],
+      "query": "What are the VPN device requirements for macOS?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "VPNGuide.pdf",
+          "score": 2.594
+        },
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.708
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.546
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.363
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.33
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1815,
+        "completion_tokens": 26
+      },
+      "_latency_ms": 2082
+    },
+    {
+      "answer": "The minimum password length is **12 characters**. [PasswordPolicy.docx]",
+      "sources": [
+        "PasswordPolicy.docx"
+      ],
+      "query": "What is the minimum password length?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.949
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.012
+        },
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.681
+        },
+        {
+          "title": "NDA.docx",
+          "score": 1.468
+        },
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.422
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1949,
+        "completion_tokens": 20
+      },
+      "_latency_ms": 2078
+    },
+    {
+      "answer": "No monetary airline-ticket limit is defined in the provided policies. Airfare limits are defined by permitted class of service based on flight duration and traveler level in Section 3 of the **Business Travel Policy**; seat upgrades beyond the permitted class are non-reimbursable [TravelPolicy.docx] [ExpensePolicy.pdf].\n\nThe only travel expense with an explicit above-limit pre-approval requirement is hotel lodging above the city-tier nightly cap, which requires Director-level or higher approval [TravelPolicy.docx].",
+      "sources": [
+        "TravelPolicy.docx",
+        "ExpensePolicy.pdf"
+      ],
+      "query": "Which expenses above the airline ticket limit require pre-approval, and where is that approval limit defined?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.624
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 2.564
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.484
+        },
+        {
+          "title": "TravelPolicy.docx",
+          "score": 2.39
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.964
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2242,
+        "completion_tokens": 276
+      },
+      "_latency_ms": 3982
+    },
+    {
+      "answer": "Key differences between the 2026 and 2025 OrbitSuite pricing:\n\n- **Higher list prices:**  \n  - Starter: **$29 \u2192 $32/seat/month**  \n  - Professional: **$59 \u2192 $65**  \n  - Enterprise: **$99 \u2192 $109** \u2014 approximately a 10% increase across existing tiers. [Pricing2025.pdf] [Pricing2026.pdf]\n\n- **New Enterprise Plus tier:** **$145/seat/month**, with a 100-seat minimum, dedicated CSM plus TAM, a 1-hour SLA, multi-region deployment, and 99.95% uptime. [Pricing2026.pdf]\n\n- **Higher Professional API limit:** increased from **50,000 to 100,000 calls/month**. [Pricing2025.pdf] [Pricing2026.pdf]\n\n- **Enterprise feature expansion:** Audit logs and data residency controls are now included in Enterprise rather than being limited to the new higher tier. [Pricing2025.pdf] [Pricing2026.pdf]\n\n- **New multi-region capability:** available only on Enterprise Plus. [Pricing2026.pdf]\n\n- **Add-ons cost more:**  \n  - Advanced Analytics: **$12 \u2192 $14/seat/month**  \n  - Premium Integrations Pack: **$8 \u2192 $9/seat/month**  \n  - Additional sandbox: **$250 \u2192 $275/month** [Pricing2025.pdf] [Pricing2026.pdf]\n\n- **Onboarding eligibility and price changed:** increased from **$4,000 to $4,500**; in 2025 it was Enterprise-only, while in 2026 it is available for Enterprise and Enterprise Plus. [Pricing2025.pdf] [Pricing2026.pdf]\n\n- **Billing change:** Enterprise Plus requires **annual prepaid billing**; monthly billing remains available for the other tiers. Annual prepaid contracts still receive a 15% discount, and 2026 also lists 2-year and 3-year prepaid term discounts. [Pricing2026.pdf] [Discounts.xlsx]\n\n- **Contract terms otherwise remain similar:** the standard term is 12 months with auto-renewal and cancellation required 30 days before renewal. [Pricing2025.pdf] [Pricing2026.pdf]",
+      "sources": [
+        "Pricing2025.pdf",
+        "Pricing2026.pdf",
+        "Discounts.xlsx"
+      ],
+      "query": "How does the 2026 pricing differ from 2025?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.69
+        },
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.536
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.517
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.261
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.203
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2293,
+        "completion_tokens": 667
+      },
+      "_latency_ms": 6545
+    },
+    {
+      "answer": "The Enterprise plan costs **$109 per seat per month**. [Pricing2026.pdf]",
+      "sources": [
+        "Pricing2026.pdf"
+      ],
+      "query": "What is the enterprise plan price per seat per month?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.736
+        },
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.642
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.405
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.29
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.965
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2291,
+        "completion_tokens": 23
+      },
+      "_latency_ms": 2994
+    },
+    {
+      "answer": "The 2025 Enterprise plan price was **$99 per seat per month**, with a **25-seat minimum**. [Pricing2025.pdf]",
+      "sources": [
+        "Pricing2025.pdf"
+      ],
+      "query": "What was the enterprise plan price in 2025?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.506
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.337
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.336
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.825
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.677
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2291,
+        "completion_tokens": 34
+      },
+      "_latency_ms": 3521
+    },
+    {
+      "answer": "I don't have enough information in the knowledge base to answer that.",
+      "sources": [],
+      "query": "What is the company's current stock price?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "Pricing2025.pdf",
+          "score": 1.551
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.501
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.498
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.377
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 1.373
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2101,
+        "completion_tokens": 17
+      },
+      "_latency_ms": 2070
+    },
+    {
+      "answer": "I don't have enough information in the knowledge base to answer that.",
+      "sources": [],
+      "query": "What is the WiFi password for the coffee shop next to the office?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.275
+        },
+        {
+          "title": "VPNGuide.pdf",
+          "score": 1.259
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.115
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.099
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.027
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1887,
+        "completion_tokens": 17
+      },
+      "_latency_ms": 2255
+    },
+    {
+      "answer": "Which limit do you mean: an expense category, tuition reimbursement, annual learning stipend, commuter benefit, remote-work stipend, subscription pricing, API usage, or vendor liability?",
+      "sources": [],
+      "query": "What is the limit?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 2.275
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 2.09
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.974
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 1.926
+        },
+        {
+          "title": "Benefits.pdf",
+          "score": 1.827
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2179,
+        "completion_tokens": 81
+      },
+      "_latency_ms": 2548
+    },
+    {
+      "answer": "Could you clarify whether you mean the standard contract term or a \u201cStandard\u201d subscription tier?",
+      "sources": [],
+      "query": "What about Standard?",
+      "confidence": "low",
+      "retrieved": [
+        {
+          "title": "Pricing2025.pdf",
+          "score": 1.995
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.984
+        },
+        {
+          "title": "ExpensePolicy.pdf",
+          "score": 1.898
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 1.893
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 1.89
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2124,
+        "completion_tokens": 100
+      },
+      "_latency_ms": 3033
+    },
+    {
+      "answer": "Exception to which policy or requirement: the Password & Authentication Policy, MFA requirements, or the volume-discount cap?",
+      "sources": [],
+      "query": "Is there any exception?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.654
+        },
+        {
+          "title": "NDA.docx",
+          "score": 2.174
+        },
+        {
+          "title": "PasswordPolicy.docx",
+          "score": 2.149
+        },
+        {
+          "title": "VendorContract.pdf",
+          "score": 2.091
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.057
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2326,
+        "completion_tokens": 63
+      },
+      "_latency_ms": 3301
+    },
+    {
+      "answer": "The Enterprise plan costs **$109 per seat per month**. [Pricing2026.pdf]",
+      "sources": [
+        "Pricing2026.pdf"
+      ],
+      "query": "What is the enterprise plan price per seat?",
+      "confidence": "medium",
+      "retrieved": [
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.583
+        },
+        {
+          "title": "Pricing2025.pdf",
+          "score": 2.495
+        },
+        {
+          "title": "Pricing2026.pdf",
+          "score": 2.294
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.133
+        },
+        {
+          "title": "Discounts.xlsx",
+          "score": 2.102
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2289,
+        "completion_tokens": 23
+      },
+      "_latency_ms": 2813
+    }
+  ]
+}

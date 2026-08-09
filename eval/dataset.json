@@ -1,0 +1,125 @@
+[
+  {
+    "id": "q1",
+    "category": "straightforward",
+    "question": "When do I need original receipts for expense claims?",
+    "expected_titles": ["ExpensePolicy.pdf"],
+    "expect_refusal": false,
+    "must_contain": ["receipt"]
+  },
+  {
+    "id": "q2",
+    "category": "straightforward",
+    "question": "How many days of bereavement leave do employees get?",
+    "expected_titles": ["LeavePolicy.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q3",
+    "category": "straightforward",
+    "question": "What are the VPN device requirements for macOS?",
+    "expected_titles": ["VPNGuide.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q4",
+    "category": "straightforward",
+    "question": "What is the minimum password length?",
+    "expected_titles": ["PasswordPolicy.docx"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q5",
+    "category": "multi_document",
+    "question": "Which expenses above the airline ticket limit require pre-approval, and where is that approval limit defined?",
+    "expected_titles": ["TravelPolicy.docx"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q6",
+    "category": "multi_document",
+    "question": "How does the 2026 pricing differ from 2025?",
+    "expected_titles": ["Pricing2025.pdf", "Pricing2026.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q7",
+    "category": "versioning",
+    "question": "What is the enterprise plan price per seat per month?",
+    "expected_titles": ["Pricing2026.pdf"],
+    "must_not_contain_in_retrieval": ["Pricing2025.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q8",
+    "category": "versioning",
+    "question": "What was the enterprise plan price in 2025?",
+    "expected_titles": ["Pricing2025.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q9",
+    "category": "no_answer",
+    "question": "What is the company's current stock price?",
+    "expected_titles": [],
+    "expect_refusal": true,
+    "must_contain": []
+  },
+  {
+    "id": "q10",
+    "category": "no_answer",
+    "question": "What is the WiFi password for the coffee shop next to the office?",
+    "expected_titles": [],
+    "expect_refusal": true,
+    "must_contain": []
+  },
+  {
+    "id": "q11",
+    "category": "ambiguous",
+    "question": "What is the limit?",
+    "expected_titles": [],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q12",
+    "category": "follow_up",
+    "history": [
+      {"role": "user", "content": "What is the Enterprise plan cancellation policy?"},
+      {"role": "assistant", "content": "Enterprise plans can be cancelled with 60 days notice [Pricing2026.pdf]."}
+    ],
+    "question": "What about Standard?",
+    "expected_titles": ["Pricing2026.pdf"],
+    "expect_refusal": false,
+    "must_contain": ["standard"]
+  },
+  {
+    "id": "q13",
+    "category": "follow_up",
+    "history": [
+      {"role": "user", "content": "When do I need original receipts for expense claims?"},
+      {"role": "assistant", "content": "An itemized receipt is required for any single expense of $25 or more [ExpensePolicy.pdf]."}
+    ],
+    "question": "Is there any exception?",
+    "expected_titles": ["ExpensePolicy.pdf"],
+    "expect_refusal": false,
+    "must_contain": []
+  },
+  {
+    "id": "q14",
+    "category": "access_control",
+    "role": "hr",
+    "question": "What is the enterprise plan price per seat?",
+    "expected_titles": [],
+    "expect_refusal": true,
+    "must_not_contain_in_retrieval": ["Pricing2025.pdf", "Pricing2026.pdf"],
+    "must_contain": []
+  }
+]
