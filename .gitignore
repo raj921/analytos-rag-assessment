@@ -13,7 +13,4 @@ web/.next/
 web/out/
 web/.env.local
 web/tsconfig.tsbuildinfo
-docs/
-AZURE_HANDOFF.md
-web/AGENTS.md
-web/CLAUDE.md
+
