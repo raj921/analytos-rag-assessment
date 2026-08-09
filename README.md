@@ -65,28 +65,23 @@ Ingestion is the portal-configured indexer with integrated vectorization. I used
 
 ```mermaid
 flowchart LR
-    subgraph ingestion [Ingestion]
-        BLOB[Blob storage<br>documents container] --> IDX[Search indexer<br>+ skillset]
-        IDX -->|chunks + embeddings| SI[(AI Search<br>documents-v1)]
-        EMB[Azure OpenAI<br>text-embedding-3-small] -.->|called by skillset| IDX
+    subgraph ingestion ["INGESTION - offline, runs when files land"]
+        BLOB["Blob storage<br>private container: documents/"] -->|"PDF / DOCX / XLSX"| IDX["AI Search indexer + skillset<br>chunks each document"]
+        EMB["Azure OpenAI<br>text-embedding-3-small"] -.->|"embeds each chunk"| IDX
+        IDX -->|"chunks + vectors"| SI[("AI Search index: documents-v1<br>chunk, title, vector, semantic config")]
     end
 
-    subgraph serve [Serving]
-        UI[Next.js static UI] --> API[FastAPI on App Service]
-        API -->|hybrid query| SI
-        SI -->|top chunks| API
-        API -->|context + question| GPT[Azure OpenAI<br>gpt-5.6-luna]
-        GPT --> API --> UI
+    subgraph serve ["SERVING - every question"]
+        USER["User"] -->|"asks"| UI["Next.js chat UI<br>static export"]
+        UI -->|"POST /api/chat, SSE stream"| API["FastAPI on App Service<br>query rewrite, role filter,<br>version dedup, threshold, cache"]
+        API -->|"hybrid query: BM25 + vector + semantic rank"| SI
+        SI -->|"top chunks + scores"| API
+        API -->|"context + question"| GPT["Azure OpenAI<br>gpt-5.6-luna"]
+        GPT -->|"grounded answer + citations"| API
+        API -->|"telemetry"| AI["Application Insights<br>latency, tokens, traces"]
+        ENTRA["Microsoft Entra ID<br>managed identity, no stored keys"] -.->|"identity"| API
+        API -.->|"no secrets needed"| KV["Key Vault<br>kept empty"]
     end
-
-    subgraph platform [Platform]
-        MI[Managed identity<br>RBAC: Search Index Data Reader,<br>Cognitive Services OpenAI User]
-        KV[Key Vault<br>empty, kept for future secrets]
-        AI[Application Insights<br>traces, latency, token counts]
-    end
-
-    MI --- API
-    API --- AI
 ```
 
 Choices I would defend in review:
